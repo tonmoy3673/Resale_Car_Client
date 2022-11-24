@@ -11,7 +11,7 @@ const Signup = () => {
     const {createUser,updateUser} =useContext(AuthContext);
     const [signUpError,setSignUpError]=useState('')
     const navigate=useNavigate();
-    
+
     const handleSignup=data=>{
         setSignUpError('');
         createUser(data.email, data.password)
@@ -25,7 +25,7 @@ const Signup = () => {
             updateUser(userInfo)
             .then(()=>{
 
-                saveUser(data.name,data.email);
+              
             })
             .catch(err=>{
                 console.log(err)
@@ -38,33 +38,11 @@ const Signup = () => {
             setSignUpError(error.message)
         });
 
-        const saveUser=(name,email)=>{
-            const user={name,email};
-            fetch('http://localhost:5000/users',{
-                method:'POST',
-                headers:{
-                    'content-type':'application/json'
-                },
-                body:JSON.stringify(user)
-            })
-            .then(res=>res.json())
-            .then(data=>{
-                getUserToken(email);
-            })
-        }
+        
 
     }
 
-    const getUserToken=email=>{
-        fetch(`http://localhost:5000/jwt?email=${email}`)
-        .then(res=>res.json())
-        .then (data=>{
-            if(data.accessToken){
-                localStorage.setItem('accessToken',data.accessToken);
-                navigate('/');
-            }
-        })
-    }
+    
 
     return (
         <div className='h-[800px] flex justify-center items-center'>
@@ -78,7 +56,7 @@ const Signup = () => {
                         </label>
                         <input type="text" {...register("name",{
                             required:'Name is required'
-                        })} className="input input-bordered w-full max-w-xs"/>
+                        })} placeholder='Your Name' className="input input-bordered w-full max-w-xs"/>
                         {errors.name && <p role='alert' className='text-red-600'>{errors?.name?.message}</p>}
                     </div>
                     
@@ -89,8 +67,23 @@ const Signup = () => {
                         </label>
                         <input {...register("email",{
                             required:"Email is required"
-                        })} type="email"  className="input input-bordered w-full max-w-xs"/>
+                        })} placeholder='Your email' type="email"  className="input input-bordered w-full max-w-xs"/>
                         {errors.email && <p role='alert' className='text-red-600'>{errors.email?.message}</p>}
+                        
+                    </div>
+
+                    <div className="form-control w-full max-w-xs">
+                        <label className="label">
+                            <span className="label-text">Seller/Buyer</span>
+                            
+                        </label>
+                        <select {...register("seller",{
+                            required:"Please select one option seller/buyer"
+                        })} className="select input-bordered w-full">
+                        <option value="seller">Seller</option>
+                        <option value="buyer">Buyer</option>
+                        </select>
+                        {errors.seller && <p role='alert' className='text-red-600'>{errors.seller?.message}</p>}
                         
                     </div>
 
@@ -104,7 +97,7 @@ const Signup = () => {
                             required:'Password is required',
                             minLength:{value:6,message: "Password must be 6 character long"},
                             pattern:{value: /(?=.*[A-Z])(?=.*[!@#$&*])(?=.*[0-9])/ , message:'Password must have uppercase number special character'}
-                        })}
+                        })} placeholder="Type Password"
                         className="input input-bordered w-full max-w-xs" />
                         {errors.password && <p role='alert' className='text-red-600'>{errors.password?.message}</p>}
                         

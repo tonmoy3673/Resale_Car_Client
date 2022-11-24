@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
-import { AuthContext } from '../../../../Context/AuthProvider';
+import { AuthContext } from '../../../Context/AuthProvider';
+
 
 const Navbar = () => {
 
@@ -13,8 +14,8 @@ const Navbar = () => {
   const menuItems = <React.Fragment>
 
     <li><Link to='/home'>Home</Link></li>
-    <li><Link to='/appointment'>Appointment</Link></li>
-    <li><Link to='/blog'>About</Link></li>
+    
+    <li><Link to='/blog'>Blog</Link></li>
 
     
     {

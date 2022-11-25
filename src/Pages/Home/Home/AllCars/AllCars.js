@@ -22,7 +22,7 @@ const AllCars = () => {
         }
     return (
         <div className='p-6'>
-            <h1 className='text-3xl text-center'>All Products {cars.length}</h1>
+            <h1 className='text-3xl text-center font-bold mb-5'>Selected Cars</h1>
             <div className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6'>
                 {
                     cars.map(car=>

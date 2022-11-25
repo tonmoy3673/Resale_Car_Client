@@ -5,11 +5,11 @@ import { useForm } from 'react-hook-form';
 import toast from 'react-hot-toast';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Context/AuthProvider';
-
+import { GoogleAuthProvider } from 'firebase/auth';
 
 const Login = () => {
     const { register, handleSubmit,formState: { errors } } = useForm();
-    const {signIn}=useContext(AuthContext);
+    const {signIn,logInWithGoogle}=useContext(AuthContext);
     const [loginError,setLoginError]=useState('');
     const location =useLocation();
     const navigate = useNavigate ();
@@ -33,9 +33,18 @@ const Login = () => {
             setLoginError(error.message)
         });
 
-        
-
     }
+        const googleProvider=new GoogleAuthProvider();
+        const handleSignInWithGoogle=()=>{
+            logInWithGoogle(googleProvider)
+            .then((result)=>{
+                const user=result.user;
+                
+            })
+            .catch(error=>console.error(error))
+        }
+
+    
     return (
         <div className='h-[800px] flex justify-center items-center'>
             <div className='w-96 p-7'>
@@ -77,7 +86,7 @@ const Login = () => {
                 </form>
                 <p className='py-2'>New to Seller/Buyer? <Link to='/signup' className='text-lime-600 underline'>Create an account</Link></p>
                 <div className="divider">OR</div>
-                <button className='btn btn-outline w-full'>Login With Google</button>
+                <button onClick={handleSignInWithGoogle} className='btn btn-outline w-full'>Login With Google</button>
             </div>
         </div>
     );

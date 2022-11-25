@@ -24,8 +24,8 @@ const Signup = () => {
             }
             updateUser(userInfo)
             .then(()=>{
-
-              
+                
+                saveUser(data.name,data.email, data.role);
             })
             .catch(err=>{
                 console.log(err)
@@ -39,9 +39,27 @@ const Signup = () => {
         });
 
         
+        
 
     }
+    const saveUser=(name,email,role)=>{
+        const user={name,email,role};
+        console.log(user);
 
+        fetch('http://localhost:5000/users',{
+            method:'POST',
+            headers:{
+                'content-type':'application/json'
+            },
+            body:JSON.stringify(user)
+        })
+        .then(res=>res.json())
+        .then(data=>{
+            console.log(data);
+            navigate('/')
+        })
+        
+    }
     
 
     return (
@@ -77,7 +95,7 @@ const Signup = () => {
                             <span className="label-text">Seller/Buyer</span>
                             
                         </label>
-                        <select {...register("seller",{
+                        <select {...register("role",{
                             required:"Please select one option seller/buyer"
                         })} className="select input-bordered w-full">
                         <option value="seller">Seller</option>

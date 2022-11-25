@@ -2,11 +2,12 @@ import React from 'react';
 import { useLoaderData } from 'react-router-dom';
 import { useQuery } from '@tanstack/react-query';
 import Car from './Car/Car';
+import Loading from '../../../Shared/Loading/Loading';
 
 const AllCars = () => {
     const category=useLoaderData();
     const {_id}=category;
-    const {data : cars=[],}=useQuery({
+    const {data : cars=[],isLoading}=useQuery({
         queryKey:['cars'],
         queryFn:async ()=>{
             const res= await fetch(`http://localhost:5000/products?id=${_id}`);
@@ -15,6 +16,10 @@ const AllCars = () => {
 
         }
     })
+
+        if (isLoading) {
+            return <Loading></Loading>
+        }
     return (
         <div className='p-6'>
             <h1 className='text-3xl text-center'>All Products {cars.length}</h1>

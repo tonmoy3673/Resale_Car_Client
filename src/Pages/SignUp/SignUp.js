@@ -18,7 +18,7 @@ const Signup = () => {
         .then(result =>{
             const user=result.user;
             
-            toast('User created successfully!!')
+            
             const userInfo={
                 displayName:(data.name)
             }
@@ -56,9 +56,23 @@ const Signup = () => {
         .then(res=>res.json())
         .then(data=>{
             console.log(data);
+            // getToken(email)
+
             navigate('/')
+            toast.success('User created successfully!!')
+
         })
         
+        // const getToken = email =>{
+        //     console.log(email);
+        //     fetch(`http://localhost:5000/jwt?email=${email}`)
+        //     .then(res => res.json())
+        //     .then(data => {
+        //         localStorage.setItem('Access-token', data.accessToken)
+        //     })
+        // }
+
+
     }
     
 

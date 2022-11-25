@@ -1,0 +1,76 @@
+[
+    
+    {
+    
+    "name": "Microbus",
+    "img": "https://aaaautoeuimg.vshcdn.net/thumb/900365500_1600x1200x95.jpg?00764",
+    "description": "description",
+    "location": "Dhaka",
+    "price": "500",
+    "resale_price": "400",
+    "used-time": "2",
+    "category": "audi",
+    "categoryId": "6380fbc42b7c4e85450b17d1"
+    },
+    {
+    
+    "name": "Microbus",
+    "img": "https://aaaautoeuimg.vshcdn.net/thumb/900365500_1600x1200x95.jpg?00764",
+    "description": "description",
+    "location": "Dhaka",
+    "price": "500",
+    "resale_price": "400",
+    "used-time": "2",
+    "category": "audi",
+    "categoryId": "6380fbc42b7c4e85450b17d1"
+    },
+    {
+    
+    "name": "Luxury Car",
+    "img": "https://aaaautoeuimg.vshcdn.net/thumb/900365500_1600x1200x95.jpg?00764",
+    "description": "description",
+    "location": "Dhaka",
+    "price": "500",
+    "resale_price": "400",
+    "used-time": "2",
+    "category": "audi",
+    "categoryId": "6380fbc42b7c4e85450b17d2"
+    },
+    {
+    
+    "name": "Luxury Car",
+    "img": "https://aaaautoeuimg.vshcdn.net/thumb/900365500_1600x1200x95.jpg?00764",
+    "description": "description",
+    "location": "Dhaka",
+    "price": "500",
+    "resale_price": "400",
+    "used-time": "2",
+    "category": "audi",
+    "categoryId": "6380fbc42b7c4e85450b17d2"
+    },
+    {
+    
+    "name": "Electric Car",
+    "img": "https://aaaautoeuimg.vshcdn.net/thumb/900365500_1600x1200x95.jpg?00764",
+    "description": "description",
+    "location": "Dhaka",
+    "price": "500",
+    "resale_price": "400",
+    "used-time": "2",
+    "category": "audi",
+    "categoryId": "6380fbc42b7c4e85450b17d3"
+    },
+    {
+    
+    "name": "Electric Car",
+    "img": "https://aaaautoeuimg.vshcdn.net/thumb/900365500_1600x1200x95.jpg?00764",
+    "description": "description",
+    "location": "Dhaka",
+    "price": "500",
+    "resale_price": "400",
+    "used-time": "2",
+    "category": "ford",
+    "categoryId": "6380fbc42b7c4e85450b17d3"
+    }
+    
+    ]

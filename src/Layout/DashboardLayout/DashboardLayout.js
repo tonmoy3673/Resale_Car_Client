@@ -37,7 +37,9 @@ const DashboardLayout = () => {
                         {
                             isAdmin && <>
                                 <li><Link className='btn bg-[#a29bfe] mb-4' to='/dashboard/allseller'>Manage Sellers</Link></li>
-                                <li><Link className='btn bg-[#a29bfe]' to='/dashboard/allbuyer'>Manage Buyers</Link></li>
+                                <li><Link className='btn bg-[#a29bfe] mb-4' to='/dashboard/allbuyer'>Manage Buyers</Link></li>
+                                <li><Link className='btn bg-[#a29bfe] mb-4' to='/dashboard/addproduct'>Add A Product</Link></li>
+                                <li><Link className='btn bg-[#a29bfe] mb-4' to='/dashboard/myproduct'>My Products</Link></li>
 
                             </>
                         }

@@ -128,7 +128,7 @@ const AddProduct = () => {
                     </label>
                     <select {...register("condition")} className="select select-bordered w-full ">
                         <option disabled selected>Select type</option>
-                        <option value="excellent">excellent</option>
+                        <option value="excellent">Excellent</option>
                         <option value="good">Good</option>
                         <option value="fair">Fair</option>
 

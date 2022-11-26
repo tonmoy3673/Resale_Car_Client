@@ -23,7 +23,7 @@ const AllCars = () => {
     return (
         <div className='p-6'>
             <h1 className='text-3xl text-center font-bold mb-5'>Selected Cars</h1>
-            <div className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6'>
+            <div className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6 mb-6'>
                 {
                     cars.map(car=>
                         <Car key={car._id} car={car}>

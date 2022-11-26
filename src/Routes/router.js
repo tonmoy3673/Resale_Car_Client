@@ -44,7 +44,7 @@ export const router=createBrowserRouter([
             {
                 path:'/category/:id',
                 loader:async({params})=>fetch(`http://localhost:5000/category/${params.id}`),
-                element:<AllCars></AllCars>
+                element:<PrivateRoute><AllCars></AllCars></PrivateRoute>
             }
         ]
     },

@@ -10,7 +10,7 @@ const Category = ({category}) => {
             <img src={categoryImg} alt=''/>
             <div className='card-actions justify-center'>
                 <Link to={`/category/${_id}`}>
-                    <button className='btn btn-secondary'>
+                    <button className='btn btn-warning'>
                         {name}
                     </button>
                 </Link>

@@ -79,7 +79,7 @@ const Signup = () => {
     return (
         <div className='h-[800px] flex justify-center items-center'>
             <div className='w-96 p-7'>
-                <h2 className='text-xl'>Signup</h2>
+                <h2 className='text-2xl font-bold text-center mb-4'>Please Signup Here!</h2>
                 <form onSubmit={handleSubmit(handleSignup)}>
                 <div className="form-control w-full max-w-xs">
                         <label className="label">
@@ -112,8 +112,9 @@ const Signup = () => {
                         <select {...register("role",{
                             required:"Please select one option seller/buyer"
                         })} className="select input-bordered w-full">
-                        <option value="seller">Seller</option>
+                        
                         <option value="buyer">Buyer</option>
+                        <option value="seller">Seller</option>
                         </select>
                         {errors.seller && <p role='alert' className='text-red-600'>{errors.seller?.message}</p>}
                         

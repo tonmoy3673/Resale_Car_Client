@@ -3,6 +3,8 @@ import { Link, Outlet } from 'react-router-dom';
 import { AuthContext } from '../../Context/AuthProvider';
 import useAdmin from '../../hooks/useAdmin';
 import useSeller from '../../hooks/useSeller';
+
+
 import Navbar from '../../Pages/Shared/Navbar/Navbar';
 
 
@@ -13,7 +15,7 @@ const DashboardLayout = () => {
     const [isSeller] = useSeller(user?.email)
 
     return (
-        <div>
+        <div className='py-6 bg-[#dfe6e9]'>
             <Navbar></Navbar>
             <div className="drawer drawer-mobile">
                 <input id="dashboard-drawer" type="checkbox" className="drawer-toggle" />
@@ -22,27 +24,29 @@ const DashboardLayout = () => {
                 </div>
                 <div className="drawer-side">
                     <label htmlFor="dashboard-drawer" className="drawer-overlay"></label>
-                    <ul className="menu p-4 w-80 bg-[#2A4DB7] text-white">
-                        <li><Link className='btn bg-secondary' to="/dashboard">Dashboard</Link></li>
-                        <li><Link className='btn bg-secondary' to='/dashboard/allseller'>My Orders</Link></li>
+                    <ul className="menu p-4 w-80 bg-[#b2bec3] text-white">
+                        <li><Link className='btn bg-[#a29bfe] mb-4' to="/dashboard">Dashboard</Link></li>
+                        <li><Link className='btn bg-[#a29bfe] mb-4' to='/dashboard/allseller'>My Orders</Link></li>
 
                         {
                             isSeller && <>
-                                <li><Link className='btn bg-secondary' to='/dashboard/addproduct'>Add A Product</Link></li>
-                                <li><Link className='btn bg-secondary' to='/dashboard/myproduct'>My Products</Link></li>
+                                <li><Link className='btn bg-[#a29bfe] mb-4' to='/dashboard/addproduct'>Add A Product</Link></li>
+                                <li><Link className='btn bg-[#a29bfe] mb-4' to='/dashboard/myproduct'>My Products</Link></li>
                             </>
                         }
                         {
                             isAdmin && <>
-                                <li><Link className='btn bg-secondary' to='/dashboard/allseller'>All Sellers</Link></li>
-                                <li><Link className='btn bg-secondary' to='/dashboard/allbuyer'>Add Buyers</Link></li>
+                                <li><Link className='btn bg-[#a29bfe]' to='/dashboard/allseller'>All Sellers</Link></li>
+                                <li><Link className='btn bg-[#a29bfe]' to='/dashboard/allbuyer'>Add Buyers</Link></li>
 
                             </>
                         }
                     </ul>
                 </div>
             </div>
+           
         </div>
+        
     );
 };
 

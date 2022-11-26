@@ -24,15 +24,7 @@ const AddProduct = () => {
 
 
 
-    const {data: locations = [] } = useQuery({
-        queryKey: ['locations'],
-        queryFn: async () => {
-            const res = await fetch(`http://localhost:5000/locations`);
-            const data = await res.json();
-            return data
-        }
-    })
-
+    
 
     const handleAddProduct = data => {
         const img = data.img[0];
@@ -84,8 +76,8 @@ const AddProduct = () => {
     }
 
     return (
-        <div className='lg:w-1/2 p-6'>
-            <h2 className='text-3xl mb-5'>Add A Product</h2>
+        <div className='lg:w-1/2 p-6 bg-[#dfe6e9]'>
+            <h2 className='text-2xl mb-5 font-bold text-center'>Please Add Your Product Here!</h2>
             <form className='mt-8 mx-auto' onSubmit={handleSubmit(handleAddProduct)}>
                 <div className="form-control">
                     <label className="label">
@@ -101,7 +93,7 @@ const AddProduct = () => {
                 </div>
                 <div className="form-control">
                     <label className="label">
-                        <span className="label-text">Title</span>
+                        <span className="label-text">Car Name</span>
                     </label>
                     <input type="text" {...register("name")} placeholder="Title" className="input input-bordered" />
                 </div>
@@ -137,16 +129,16 @@ const AddProduct = () => {
                 </div>
                 <div className="form-control">
                     <label className="label">
-                        <span className="label-text">Locations</span>
+                        <span className="label-text">Location</span>
                     </label>
                     <select {...register("location")} className="select select-bordered w-full ">
                         <option disabled selected>Selected Location</option>
-                        {
-                            locations.map(location => <option defaultValue={location.location}
-                                key={location._id}
-                                value={location.location}
-                            >{location.location}</option>)
-                        }
+                        <option value="Dhaka">Dhaka</option>
+                        <option value="Khulna">Khulna</option>
+                        <option value="Sylhet">Sylhet</option>
+                        <option value="Chattogram">Chattogram</option>
+                        <option value="Barishal">Barishal</option>
+                        <option value="Jashore">Jashore</option>
                     </select>
                 </div>
                 <div className="form-control">
@@ -168,7 +160,7 @@ const AddProduct = () => {
                     {errors.categoryId && <p>Error</p>}
                 </div>
                 <div className="form-control">
-                    <label className="label">Description</label>
+                    <label className="label">Product Description</label>
                     <textarea cols="30" rows="20" type="textarea" {...register("description")} placeholder="Description" className="input input-bordered"></textarea>
                 </div>
                 <div className="form-control">
@@ -176,7 +168,7 @@ const AddProduct = () => {
                     <input type="file" {...register("img")} placeholder="Photo Upload" className="input input-bordered" />
                 </div>
                 <div className="form-control mt-6">
-                    <button type="submit" className="btn bg-red-600 text-white border-none">Add A Product</button>
+                    <button type="submit" className="btn btn-warning text-white border-none">Add A Product</button>
                 </div>
             </form>
         </div>

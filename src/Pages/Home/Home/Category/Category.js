@@ -14,7 +14,7 @@ const Category = ({category}) => {
                         {name}
                     </button>
                 </Link>
-
+                
             </div>
             </div>
         </div>

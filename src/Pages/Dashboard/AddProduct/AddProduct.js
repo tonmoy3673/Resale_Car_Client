@@ -16,7 +16,7 @@ const AddProduct = () => {
     const { data: categories = [] } = useQuery({
         queryKey: ['categories'],
         queryFn: async () => {
-            const res = await fetch(`http://localhost:5000/categories`);
+            const res = await fetch(`http://localhost:5000/category`);
             const data = await res.json();
             return data
         }
@@ -51,7 +51,8 @@ const AddProduct = () => {
                         resale_price: data.resale_price,
                         description: data.description,
                         condition: data.condition,
-                        used_time: data.used_time
+                        used_time: data.used_time,
+                        phone:data.phone
 
                     }
 
@@ -113,7 +114,13 @@ const AddProduct = () => {
                     <label className="label">
                         <span className="label-text">Used Time</span>
                     </label>
-                    <input type="text" {...register("used_time")} placeholder="Resale Price" className="input input-bordered" />
+                    <input type="text" {...register("used_time")} placeholder="Years Of Use" className="input input-bordered" />
+                </div>
+                <div className="form-control">
+                    <label className="label">
+                        <span className="label-text">Phone Number</span>
+                    </label>
+                    <input type="text" {...register("phone")} placeholder="Phone Number" className="input input-bordered" />
                 </div>
                 <div className="form-control">
                     <label className="label">
@@ -148,9 +155,9 @@ const AddProduct = () => {
                     <select {...register("categoryId", {
                         required: `please`
                     })} className="select select-bordered w-full ">
-                        <option disabled selected>Selected Category</option>
+                       
                         {
-                            categories.map(category => <option defaultValue={category._id}
+                     categories.map(category => <option defaultValue={category._id}
                                 key={category._id}
                                 value={category._id}
                             >{category.category}</option>)

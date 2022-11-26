@@ -19,7 +19,7 @@ const Car = ({car}) => {
                 <p>Original Price : <del>${price}</del></p>
                 <p>Resale Price : ${resale_price}</p>
                 <p>Posted By : {seller}</p>
-                <p>Used Of Years : {used_time}</p>
+                <p>Used Of Years : {used_time} years</p>
                 <p>Condition : {condition}</p>
                 <p>Location : {location}</p>
                 <p>Date Of Post : {dateOfPost}</p>

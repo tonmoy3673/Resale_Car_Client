@@ -26,7 +26,7 @@ const DashboardLayout = () => {
                     <label htmlFor="dashboard-drawer" className="drawer-overlay"></label>
                     <ul className="menu p-4 w-80 bg-[#b2bec3] text-white">
                         <li><Link className='btn bg-[#a29bfe] mb-4' to="/dashboard">Dashboard</Link></li>
-                        <li><Link className='btn bg-[#a29bfe] mb-4' to='/dashboard/allseller'>My Orders</Link></li>
+                        <li><Link className='btn bg-[#a29bfe] mb-4' to='/dashboard/myorders'>My Orders</Link></li>
 
                         {
                             isSeller && <>
@@ -36,8 +36,8 @@ const DashboardLayout = () => {
                         }
                         {
                             isAdmin && <>
-                                <li><Link className='btn bg-[#a29bfe] mb-4' to='/dashboard/allseller'>All Sellers</Link></li>
-                                <li><Link className='btn bg-[#a29bfe]' to='/dashboard/allbuyer'>Add Buyers</Link></li>
+                                <li><Link className='btn bg-[#a29bfe] mb-4' to='/dashboard/allseller'>Manage Sellers</Link></li>
+                                <li><Link className='btn bg-[#a29bfe]' to='/dashboard/allbuyer'>Manage Buyers</Link></li>
 
                             </>
                         }

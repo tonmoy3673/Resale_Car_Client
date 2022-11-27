@@ -6,7 +6,7 @@ import { router } from './Routes/router';
 
 function App() {
   return (
-    <div className='max-w-[1280px] mx-auto'>
+    <div className='bg-[#dfe6e9]'>
       <RouterProvider router={router}/>
       <Toaster />
     </div>

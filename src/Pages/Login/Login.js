@@ -49,15 +49,15 @@ const Login = () => {
 
     
     return (
-        <div className='h-[800px] flex justify-center items-center'>
-            <div className='w-96 p-7'>
-                <h2 className='text-xl'>Login</h2>
+        <div className='h-[800px] flex justify-center items-center bg-[]'>
+            <div className='w-96 p-10 bg-[#00a8ff] rounded'>
+                <h2 className='text-2xl font-bold text-center mb-4'>Please Login Here!</h2>
                 <form onSubmit={handleSubmit(handleLogin)}>
 
                     
                     <div className="form-control w-full max-w-xs">
                         <label className="label">
-                            <span className="label-text">Email</span>
+                            <span className="label-text text-xl font-semibold">Email</span>
                             
                         </label>
                         <input type="email" {...register("email",{required:"Email Address is required"})} className="input input-bordered w-full max-w-xs"/>
@@ -66,7 +66,7 @@ const Login = () => {
 
                     <div className="form-control w-full max-w-xs">
                         <label className="label">
-                            <span className="label-text">Password</span>
+                            <span className="label-text text-xl font-semibold">Password</span>
                             
                         </label>
                         <input type="password" {...register("password",{required:"Password is required",
@@ -82,13 +82,13 @@ const Login = () => {
                     </div>
                     
                    
-                    <input type="submit" className='btn btn-primary w-full' value='Login' />
+                    <input type="submit" className='btn w-full' value='Login' />
                     <div>
                         {loginError && <p className='text-red-600'>{loginError}</p>}
                     </div>
                 </form>
-                <p className='py-2'>New to Seller/Buyer? <Link to='/signup' className='text-lime-600 underline'>Create an account</Link></p>
-                <div className="divider">OR</div>
+                <p className='py-2'>New to Seller/Buyer? <Link to='/signup' className='text-lime-700 underline'>Create an account</Link></p>
+                <div className="divider text-xl font-semibold">OR</div>
                 <button onClick={handleSignInWithGoogle} className='btn btn-outline w-full'>Login With Google</button>
             </div>
         </div>

@@ -16,6 +16,7 @@ const OrderModal = ({ product, setProduct, refetch }) => {
 
 
     const handleOrder = data => {
+            
         const order = {
             title: name,
             product_img: img,
@@ -59,7 +60,7 @@ const OrderModal = ({ product, setProduct, refetch }) => {
             <div className="modal">
                 <div className="modal-box relative">
                     <label htmlFor="order-modal" className="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
-                    <h3 className="text-lg font-bold">{name}</h3>
+                    <h3 className="text-xl font-bold">{name}</h3>
                     <form className='mt-8' onSubmit={handleSubmit(handleOrder)}>
                         <div className="form-control">
                             <input readOnly defaultValue={user?.displayName} type="text" {...register("name", {
@@ -111,7 +112,7 @@ const OrderModal = ({ product, setProduct, refetch }) => {
                             }
                         </div>
                         <div className="form-control mt-6">
-                            <button type="submit" className="btn btn-secondary">Order</button>
+                            <button type="submit" className="btn btn-warning text-white semi-bold">Submit Order</button>
                         </div>
                     </form>
                 </div>

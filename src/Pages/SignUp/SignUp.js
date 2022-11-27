@@ -78,12 +78,12 @@ const Signup = () => {
 
     return (
         <div className='h-[800px] flex justify-center items-center'>
-            <div className='w-96 p-7'>
+            <div className='w-96 p-10 bg-[#00a8ff] rounded'>
                 <h2 className='text-2xl font-bold text-center mb-4'>Please Signup Here!</h2>
                 <form onSubmit={handleSubmit(handleSignup)}>
                 <div className="form-control w-full max-w-xs">
                         <label className="label">
-                            <span className="label-text">Name</span>
+                            <span className="label-text text-xl font-semibold">Name</span>
                             
                         </label>
                         <input type="text" {...register("name",{
@@ -94,7 +94,7 @@ const Signup = () => {
                     
                     <div className="form-control w-full max-w-xs">
                         <label className="label">
-                            <span className="label-text">Email</span>
+                            <span className="label-text text-xl font-semibold">Email</span>
                             
                         </label>
                         <input {...register("email",{
@@ -106,7 +106,7 @@ const Signup = () => {
 
                     <div className="form-control w-full max-w-xs">
                         <label className="label">
-                            <span className="label-text">Seller/Buyer</span>
+                            <span className="label-text text-xl font-semibold">Seller/Buyer</span>
                             
                         </label>
                         <select {...register("role",{
@@ -122,7 +122,7 @@ const Signup = () => {
 
                     <div className="form-control w-full max-w-xs">
                         <label className="label">
-                            <span className="label-text">Password</span>
+                            <span className="label-text text-xl font-semibold">Password</span>
                             
                         </label>
                         <input type="password" 
@@ -138,15 +138,14 @@ const Signup = () => {
                     
                    
                    <div className='py-4'>
-                   <input type="submit" className='btn btn-primary w-full' value='sing Up'/>
+                   <input type="submit" className='btn w-full' value='sing Up'/>
                    </div>
                 </form>
                 <div>
                     {signUpError && <p className='text-red-600'>{signUpError}</p>}
                 </div>
-                <p className='py-2'>Already have an account <Link to='/login' className='text-lime-600 underline'>Please Login</Link></p>
-                <div className="divider">OR</div>
-                <button className='btn btn-outline w-full'>Login With Google</button>
+                <p className='py-2'>Already have an account <Link to='/login' className='text-lime-700 underline'>Please Login</Link></p>
+                
             </div>
         </div>
     );

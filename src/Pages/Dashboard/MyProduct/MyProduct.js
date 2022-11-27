@@ -52,8 +52,8 @@ const MyProduct = () => {
                                     <th>{i+1}</th>
                                     <td>{product?.name}</td>
                                     <td>{product?.email}</td>
-                                    <td>{product?.price}</td>
-                                    <td><button onClick={()=>handleProductDelete(product)} className='btn btn-sm bg-red-600 border-red-600 text-white'></button></td>
+                                    <td className='text-red-500'>{product?.price}</td>
+                                    <td><button onClick={()=>handleProductDelete(product)} className='btn btn-sm bg-red-600 border-red-600 text-white'>Delete Product</button></td>
                             </tr>)
                         }
                     </tbody>

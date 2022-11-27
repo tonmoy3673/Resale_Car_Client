@@ -1,28 +1,33 @@
 import React from 'react';
 
-const Car = ({car}) => {
 
+
+
+const Car = ({car,setProduct}) => {
+    
     const {_id,name,img,location,price,resale_price,description,condition,used_time,dateOfPost,seller}=car;
     return (
         <div className='card bg-base-100 shadow-xl'>
             <figure>
             <img src={img} alt='photos'/>
             </figure>
-            <div className='card-body'>
+            <div className='card-body h-screen bg-gray-100'>
                 <h2 className='card-tile text-center'>
-                    <div className='badge badge-primary rounded-sm text-2xl h-10'>
+                    <div className=' bg-emerald-500 rounded-sm text-2xl h-10 text-white'>
                         {name}
         
                     </div>
                 </h2>
-                <p>Description : {description}</p>
-                <p>Original Price : <del>${price}</del></p>
-                <p>Resale Price : ${resale_price}</p>
-                <p>Posted By : {seller}</p>
-                <p>Used Of Years : {used_time} years</p>
-                <p>Condition : {condition}</p>
-                <p>Location : {location}</p>
-                <p>Date Of Post : {dateOfPost}</p>
+                <p ><span className='font-semibold'>Description</span> : {description}</p>
+                <p className='font-semibold'>Original Price : <del className='text-gray-500'>${price}</del></p>
+                <p className='font-semibold'>Resale Price : <span className='text-red-400'>${resale_price}</span></p>
+                
+                <p className='font-semibold'>Posted By :<span>{seller}</span>  </p>
+                
+                <p className='font-semibold'>Used Of Years : {used_time} years</p>
+                <p className='font-semibold'>Condition : {condition}</p>
+                <p className='font-semibold'>Location : {location}</p>
+                <p className='font-semibold'>Date Of Post : {dateOfPost}</p>
 
                 
                 
@@ -32,9 +37,14 @@ const Car = ({car}) => {
                 
                 
                 <div className='card-actions justify-center w-12/12'>
-                    <button className='btn btn-md btn-warning text-white font-semibold'>
-                        Booked Now
-                    </button>
+                    
+                 <label htmlFor='order-modal'
+                        className='btn btn-warning text-white' onClick={()=> setProduct(car)}>Booked Now
+
+                        </label>
+                        
+                    
+                    
                 </div>
         </div>
     );

@@ -1,6 +1,7 @@
 import { useQuery } from '@tanstack/react-query';
 import React, { useContext } from 'react';
 import { AuthContext } from '../../../Context/AuthProvider';
+import useTitle from '../../../hooks/useTitle';
 import Loading from '../../Shared/Loading/Loading';
 
 
@@ -8,6 +9,7 @@ import Loading from '../../Shared/Loading/Loading';
 const MyOrders = () => {
     const {user} =useContext(AuthContext);
 
+    useTitle('My-Order')
 
     const {data : orders = [], isLoading} = useQuery({
         queryKey: ["orders"],

@@ -6,8 +6,10 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Context/AuthProvider';
 import { GoogleAuthProvider } from 'firebase/auth';
 import toast from 'react-hot-toast';
+import useTitle from '../../hooks/useTitle';
 
 const Login = () => {
+    useTitle('Login')
     const { register, handleSubmit,formState: { errors } } = useForm();
     const {signIn,logInWithGoogle}=useContext(AuthContext);
     const [loginError,setLoginError]=useState('');
@@ -18,6 +20,8 @@ const Login = () => {
 
     
     const handleLogin=data=>{
+
+        
 
         setLoginError('');
         signIn(data.email, data.password)

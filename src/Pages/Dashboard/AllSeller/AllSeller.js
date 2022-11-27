@@ -3,11 +3,13 @@ import { useQuery } from '@tanstack/react-query';
 
 import toast from 'react-hot-toast';
 import Loading from '../../Shared/Loading/Loading';
+import useTitle from '../../../hooks/useTitle';
 const AllSeller = () => {
+    useTitle('All-Sellers')
     const {data : sellers=[],isLoading,refetch}=useQuery({
         queryKey:['sellers'],
         queryFn:async()=>{
-            const res=await fetch('http://localhost:5000/users/seller?role=seller');
+            const res=await fetch('http://localhost:5000/users?role=sellers');
             const data=await res.json();
             return data
         }
@@ -49,9 +51,9 @@ const AllSeller = () => {
                         {
                             sellers.map((seller,i)=> <tr key={seller._id}>
                                 <th>{i + 1}</th>
-                                <td>{seller?.name}</td>
+                                <td className='font-semibold'>{seller?.name}</td>
                                 <td>{seller?.email}</td>
-                                <td><button onClick={()=>handlesellerDelete(seller)} className='btn btn-sm bg-red-600 border-red-600 text-white'></button> </td>
+                                <td><button onClick={()=>handlesellerDelete(seller)} className='btn btn-sm bg-red-600 border-red-500 text-white'>Delete</button></td>
                             </tr>)
                         }
                     </tbody>

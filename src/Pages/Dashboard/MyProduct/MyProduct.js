@@ -3,9 +3,11 @@ import { useQuery } from '@tanstack/react-query';
 import React, { useContext } from 'react';
 import toast from 'react-hot-toast';
 import { AuthContext } from '../../../Context/AuthProvider';
+import useTitle from '../../../hooks/useTitle';
 import Loading from '../../Shared/Loading/Loading';
 
 const MyProduct = () => {
+    useTitle('My-Product')
     const {user}=useContext(AuthContext);
     const {data: products=[],refetch,isLoading}=useQuery({
         queryKey:['products'],

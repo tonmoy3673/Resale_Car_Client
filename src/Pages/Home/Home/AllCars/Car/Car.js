@@ -1,10 +1,13 @@
 import React from 'react';
+import useTitle from '../../../../../hooks/useTitle';
 
 
 
 
 const Car = ({car,setProduct}) => {
-    
+
+    useTitle('Car-Details')
+
     const {_id,name,img,location,price,resale_price,description,condition,used_time,dateOfPost,seller}=car;
     return (
         <div className='card bg-base-100 shadow-xl'>

@@ -3,6 +3,7 @@ import { Link, Outlet } from 'react-router-dom';
 import { AuthContext } from '../../Context/AuthProvider';
 import useAdmin from '../../hooks/useAdmin';
 import useSeller from '../../hooks/useSeller';
+import useTitle from '../../hooks/useTitle';
 
 
 import Navbar from '../../Pages/Shared/Navbar/Navbar';
@@ -13,6 +14,7 @@ const DashboardLayout = () => {
     const {user}=useContext(AuthContext);
     const [isAdmin] = useAdmin(user?.email)
     const [isSeller] = useSeller(user?.email)
+    useTitle('Dashboard')
 
     return (
         <div className='py-6 bg-[#dfe6e9]'>

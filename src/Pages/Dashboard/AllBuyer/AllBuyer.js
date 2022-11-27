@@ -1,9 +1,11 @@
 import { useQuery } from '@tanstack/react-query';
 import React from 'react';
 import toast from 'react-hot-toast';
+import useTitle from '../../../hooks/useTitle';
 import Loading from '../../Shared/Loading/Loading';
 
 const AllBuyer = () => {
+    useTitle('All-Buyers');
 
     const {data : buyers=[],isLoading,refetch}=useQuery({
         queryKey:['buyers'],
@@ -52,9 +54,9 @@ const AllBuyer = () => {
                         {
                             buyers.map((buyer,i)=> <tr key={buyer._id}>
                                 <th>{i + 1}</th>
-                                <td>{buyer?.name}</td>
+                                <td className='font-semibold'>{buyer?.name}</td>
                                 <td>{buyer?.email}</td>
-                                <td><button onClick={()=>handlebuyerDelete(buyer)} className='btn btn-sm bg-red-600 border-red-600 text-white'></button> </td>
+                                <td><button onClick={()=>handlebuyerDelete(buyer)} className='btn btn-sm bg-red-600 border-red-600 text-white'>Delete</button> </td>
                             </tr>)
                         }
                     </tbody>

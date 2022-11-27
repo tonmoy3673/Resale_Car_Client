@@ -8,10 +8,12 @@ const AllBuyer = () => {
     const {data : buyers=[],isLoading,refetch}=useQuery({
         queryKey:['buyers'],
         queryFn:async()=>{
-            const res=await fetch('http://localhost:5000/users/buyer?role=buyer');
+            const res=await fetch('http://localhost:5000/users?role=buyers');
             const data=await res.json();
             return data
+            
         }
+        
     })
 
         const handlebuyerDelete=buyer=>{

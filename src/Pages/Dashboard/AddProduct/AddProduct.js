@@ -6,6 +6,7 @@ import toast from 'react-hot-toast';
 import { useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../Context/AuthProvider';
 import useTitle from '../../../hooks/useTitle';
+import Loading from '../../Shared/Loading/Loading';
 
 
 const AddProduct = () => {
@@ -15,7 +16,7 @@ const AddProduct = () => {
     const navigate = useNavigate();
     const imgHostingApiKey = process.env.REACT_APP_imgbb_api_key;
     
-    const { data: categories = [] } = useQuery({
+    const { data: categories = [],isLoading } = useQuery({
         queryKey: ['categories'],
         queryFn: async () => {
             const res = await fetch(`http://localhost:5000/category`);
@@ -75,6 +76,10 @@ const AddProduct = () => {
                         })
                 }
             })
+
+            if(isLoading){
+                return <Loading></Loading>
+            }
 
     }
 

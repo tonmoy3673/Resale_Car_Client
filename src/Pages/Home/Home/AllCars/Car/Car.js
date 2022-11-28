@@ -1,5 +1,6 @@
 import React from 'react';
 import useTitle from '../../../../../hooks/useTitle';
+import icon from '../../../../../images/icon.jpg';
 
 
 
@@ -25,7 +26,7 @@ const Car = ({car,setProduct}) => {
                 <p className='font-semibold'>Original Price : <del className='text-gray-500'>${price}</del></p>
                 <p className='font-semibold'>Resale Price : <span className='text-red-400'>${resale_price}</span></p>
                 
-                <p className='font-semibold'>Posted By :<span>{seller}</span>  </p>
+                <p className='font-semibold flex items-center'>Posted By : <span>{seller}</span> <img src={icon} alt='icon' className='w-8 ml-2'/> </p>
                 
                 <p className='font-semibold'>Used Of Years : {used_time} years</p>
                 <p className='font-semibold'>Condition : {condition}</p>

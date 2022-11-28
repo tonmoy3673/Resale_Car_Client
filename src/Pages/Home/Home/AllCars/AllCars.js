@@ -19,7 +19,7 @@ const AllCars = () => {
         }
     })
 
-    console.log(product);
+   
 
         if (isLoading) {
             return <Loading></Loading>

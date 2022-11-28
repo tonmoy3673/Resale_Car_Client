@@ -35,16 +35,17 @@ const AllSeller = () => {
 
     return (
         <div className='p-5'>
-            <h2 className='text-2xl mb-5'> All sellers : {sellers.length}</h2>
+            <h2 className='text-2xl mb-5 font-bold text-center'> All Sellers : {sellers.length}</h2>
             <div className='overflow-x-auto'>
                 <table className='table w-full'>
                     <thead>
                             <tr>
                                 <th>
-                                    <th>Name</th>
-                                    <th>Email</th>
-                                    <th>Delete</th>
+                                    idx
                                 </th>
+                                <th>Name</th>
+                                    <th>Email</th>
+                                    <th>Remove</th>
                             </tr>
                     </thead>
                     <tbody>

@@ -30,12 +30,12 @@ const MyOrders = () => {
 
     return (
         <div className='p-5'>
-            <h2 className='text-3xl mb-5'>All Orders : {orders.length}</h2>
+            <h2 className='text-2xl mb-5 text-center font-bold'>My Orders : {orders.length}</h2>
             <div className="overflow-x-auto">
                 <table className="table w-full">
                     <thead>
                         <tr>
-                            <th>idx</th>
+                        <th>idx</th>
                             <th>Img</th>
                             <th>Your Product Name</th>
                             <th>Product Price</th>

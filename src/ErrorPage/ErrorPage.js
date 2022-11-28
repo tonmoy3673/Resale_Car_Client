@@ -5,7 +5,7 @@ import img from '.././images/error.jpg'
 const ErrorPage = () => {
     const error=useRouteError();
     return (
-        <div className='py-4 text-center'>
+        <div className='py-4 text-center bg-[#dfe6e9]'>
             <div className=''>
                 <img src={img} alt='error_image' className='w-3/12 h-2/4 mx-auto'  />
             </div>

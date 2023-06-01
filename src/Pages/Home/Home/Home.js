@@ -5,6 +5,7 @@ import Categories from './Categories/Categories';
 import Section from './Section/Section';
 import CarDetails from '../CarDetails/CarDetails';
 import Secure from '../Secure/Secure';
+import Choose from './Choose/Choose';
 
 const Home = () => {
     useTitle('Home-Page')
@@ -14,6 +15,7 @@ const Home = () => {
            <Categories></Categories>
            <Section></Section>
            <CarDetails/>
+           <Choose/>
            <Secure/>
         </div>
     );

@@ -2,8 +2,33 @@ import React from 'react';
 
 const Choose = () => {
     return (
-        <div>
-            
+        <div className='grid grid-cols-1 lg:grid-cols-2 items-center justify-between'>
+            {/* ===== image section ====== */}
+            <div className='mb-6'>
+                <div class="card w-10/12 bg-base-100 shadow-xl mx-auto">
+                    <div class="card-body">
+                        <div className='flex items-center gap-3 mb-2'>
+                        <img className='w-12' src='https://i.ibb.co/KxQLvk1/MORTGA1.png' alt='icon'/>
+                        <p className='text-2xl font-semibold'>Do More From Home</p>
+                        </div>
+                        <div className='flex items-center gap-3 mb-2'>
+                        <img className='w-12' src='https://i.ibb.co/BKRVhnY/Auto-Loan-copy.png' alt='icon'/>
+                        <p className='text-2xl font-semibold'>24 Hours Test Drive</p>
+                        </div>
+                        <div className='flex items-center gap-3'>
+                        <img className='w-12' src='https://i.ibb.co/CMg08PH/Funds-Transfer-01-copy.png' alt='icon'/>
+                        <p className='text-2xl font-semibold'>Money Return Guarantee</p>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+
+            {/* ======== text section ====== */}
+            <div>
+                <h2 className='text-4xl font-bold mb-4 text-center lg:text-start'>Why Choose Us</h2>
+                <p>We offer a wide range of pre-owned vehicles to suit every budget and preference. Whether you're looking for a compact sedan, a spacious SUV, or a sporty coupe, our inventory has something for everyone. Our team carefully curates the listings to ensure that you have access to high-quality, reliable vehicles.</p>
+            </div>
         </div>
     );
 };

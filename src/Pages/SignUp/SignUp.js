@@ -47,7 +47,7 @@ const Signup = () => {
         const user={name,email,role};
         console.log(user);
 
-        fetch('http://localhost:5000/users',{
+        fetch('https://car-dealer-server-lovat.vercel.app/users',{
             method:'POST',
             headers:{
                 'content-type':'application/json'
@@ -66,7 +66,7 @@ const Signup = () => {
         
         // const getToken = email =>{
         //     console.log(email);
-        //     fetch(`http://localhost:5000/jwt?email=${email}`)
+        //     fetch(`https://car-dealer-server-lovat.vercel.app/jwt?email=${email}`)
         //     .then(res => res.json())
         //     .then(data => {
         //         localStorage.setItem('Access-token', data.accessToken)

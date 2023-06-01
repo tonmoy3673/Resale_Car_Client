@@ -9,14 +9,14 @@ const AllSeller = () => {
     const {data : sellers=[],isLoading,refetch}=useQuery({
         queryKey:['sellers'],
         queryFn:async()=>{
-            const res=await fetch('http://localhost:5000/users?role=sellers');
+            const res=await fetch('https://car-dealer-server-lovat.vercel.app/users?role=sellers');
             const data=await res.json();
             return data
         }
     })
 
         const handlesellerDelete=seller=>{
-            fetch(`http://localhost:5000/users/seller/${seller?._id}`,{
+            fetch(`https://car-dealer-server-lovat.vercel.app/users/seller/${seller?._id}`,{
                 method:'DELETE',
 
             })

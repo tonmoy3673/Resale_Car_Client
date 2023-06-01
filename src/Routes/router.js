@@ -46,7 +46,7 @@ export const router=createBrowserRouter([
             },
             {
                 path:'/category/:id',
-                loader:async({params})=>fetch(`http://localhost:5000/category/${params.id}`),
+                loader:async({params})=>fetch(`https://car-dealer-server-lovat.vercel.app/category/${params.id}`),
                 element:<PrivateRoute><AllCars></AllCars></PrivateRoute>
             }
         ]

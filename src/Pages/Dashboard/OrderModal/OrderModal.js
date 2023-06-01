@@ -28,7 +28,7 @@ const OrderModal = ({ product, setProduct, refetch }) => {
             seller_email : email,
         }
 
-        fetch('http://localhost:5000/orders', {
+        fetch('https://car-dealer-server-lovat.vercel.app/orders', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

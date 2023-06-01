@@ -22,9 +22,9 @@ const Secure = () => {
     ]
     return (
         <div className='py-12'>
-            <h2 className='text-center py-6 mb-4 text-4xl font-bold'>Easy And Secure Transaction</h2>
+            <h2 className='text-center py-6 mb-6 text-4xl font-bold'>Easy And Secure Transaction</h2>
             
-            <div className='grid gap-6 lg:grid-cols-3 grid-cols-1'>
+            <div className='grid gap-6 lg:grid-cols-3 grid-cols-1 items-center justify-center'>
                 {
                     info.map(detail=><SecureInfo
                     key={detail._id}

@@ -4,6 +4,7 @@ import Banner from './Banner/Banner';
 import Categories from './Categories/Categories';
 import Section from './Section/Section';
 import CarDetails from '../CarDetails/CarDetails';
+import Secure from '../Secure/Secure';
 
 const Home = () => {
     useTitle('Home-Page')
@@ -13,6 +14,7 @@ const Home = () => {
            <Categories></Categories>
            <Section></Section>
            <CarDetails/>
+           <Secure/>
         </div>
     );
 };

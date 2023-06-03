@@ -11,7 +11,7 @@ const Category = ({category}) => {
             <img src={categoryImg} alt='category_img' className='rounded'/>
             <div className='card-actions justify-center'>
                 <Link to={`/category/${_id}`}>
-                    <button className='btn btn-warning'>
+                    <button className='btn btn1'>
                         {name}
                     </button>
                 </Link>

@@ -49,7 +49,7 @@ const Contact = () => {
       </div>
       <div className='py-16'>
 
-        <div id='contact' className='rounded banner' style={{ backgroundImage: `url("https://images.pexels.com/photos/13069032/pexels-photo-13069032.jpeg?auto=compress&cs=tinysrgb&w=600")`, backgroundPosition:'center',backgroundSize:'cover' }} >
+        <div id='contact' className='rounded banner' style={{ backgroundImage: `url("https://i.ibb.co/rwKqLGz/carBG.jpg")`, backgroundPosition:'center',backgroundSize:'cover' }} >
 
           <h1 className='text-center text-4xl font-semibold mt-8 text-white py-16'>Please type here</h1>
 
@@ -68,7 +68,7 @@ const Contact = () => {
                     <textarea name='message' className="textarea textarea-bordered border bg-transparent border-white" placeholder="Message" required></textarea>
                   </div>
                   <div className="form-control mt-6 mb-8">
-                    <button type='submit' className="btn border-none  bg-[#00b894] text-white"><FaTelegramPlane className='mr-2' /><span>Send Message</span></button>
+                    <button type='submit' className="btn border-none btn1 text-white"><FaTelegramPlane className='mr-2' /><span>Send Message</span></button>
                   </div>
                 </form>
                 <div className='flex flex-col pt-4 text-white'>

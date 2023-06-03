@@ -20,7 +20,7 @@ const Update = () => {
                                 <label className="sr-only" htmlFor="email"> Email </label>
 
                                 <input
-                                    className="lg:w-full w-3/4 rounded-full border-gray-200 bg-gray-100 p-4 pe-32 text-sm font-medium dark:border-gray-700 dark:bg-gray-800 dark:text-white"
+                                    className="lg:w-full w-2/4 rounded-full border-gray-200 bg-gray-100 p-4 pe-32 text-sm font-medium dark:border-gray-700 dark:bg-gray-800 dark:text-white"
                                     id="email"
                                     type="email"
                                     placeholder="Enter Email Here"

@@ -3,7 +3,7 @@ import React from 'react';
 const Choose = () => {
     return (
         <div className='grid grid-cols-1 lg:grid-cols-2 items-center justify-between'>
-           <div className='mb-5'>
+           <div className='mb-5 px-8'>
                 <h2 className='text-4xl font-bold mb-4 text-center lg:text-start'>Why Choose Us</h2>
                 <p>We offer a wide range of pre-owned vehicles to suit every budget and preference. Whether you're looking for a compact sedan, a spacious SUV, or a sporty coupe, our inventory has something for everyone. Our team carefully curates the listings to ensure that you have access to high-quality, reliable vehicles.</p>
             </div>

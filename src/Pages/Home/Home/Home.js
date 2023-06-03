@@ -8,6 +8,7 @@ import Secure from '../Secure/Secure';
 import Choose from './Choose/Choose';
 import Money from './Money/Money';
 import Update from './Update/Update';
+import Certified from './Certified/Certified';
 
 const Home = () => {
     useTitle('Home-Page')
@@ -21,6 +22,7 @@ const Home = () => {
            <Choose/>
            <Secure/>
            <Update/>
+           <Certified/>
         </div>
     );
 };

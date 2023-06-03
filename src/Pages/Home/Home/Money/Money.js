@@ -9,7 +9,7 @@ const Money = () => {
 
                 <div className='text-center lg:text-start'>
                     
-                    <h1 className='text-4xl font-bold text-[#538EB6] py-4'>Create content. <br />Make money for everybody.</h1>
+                    <h1 className='text-4xl font-bold text1 py-4'>Create content. <br />Make money for everybody.</h1>
                     <p className='text-md text-black'>With Car Dealer you can enable your loyal fan base to bid for a share of the revenue from your next product or content offering to be launched over a stipulated time period. This leads to an audience base that is even more invested in you and your work, literally and figuratively.
                     </p>
                     <div className='py-4 mt-3'>
@@ -29,7 +29,7 @@ const Money = () => {
 
                 <div className='text-center lg:text-start'>
                 
-                    <h1 className='text-4xl font-bold text-[#538EB6] py-4'>Build your custom <br />subscription platform</h1>
+                    <h1 className='text-4xl font-bold text1 py-4'>Build your custom <br />subscription platform</h1>
                     <p className='text-md text-black'>Build your custom subscription platform
                         Create your own content and subscription engine and have direct control of audience revenues. Car Dealer gives you access to state-of-the-art No-Code content platform which enables you to raise subscriptions as well as mint NFTs
                     </p>

@@ -7,6 +7,7 @@ import CarDetails from '../CarDetails/CarDetails';
 import Secure from '../Secure/Secure';
 import Choose from './Choose/Choose';
 import Money from './Money/Money';
+import Update from './Update/Update';
 
 const Home = () => {
     useTitle('Home-Page')
@@ -19,6 +20,7 @@ const Home = () => {
            <Money/>
            <Choose/>
            <Secure/>
+           <Update/>
         </div>
     );
 };

@@ -35,7 +35,7 @@ const Contact = () => {
         <Lottie animationData={contact} loop={true} className='lg:w-8/12 mx-auto rounded' />
 
         <div>
-      <h1 className='text-4xl lg:text-start mb-3 font-bold text-center'>
+      <h1 className='text-4xl text1 lg:text-start mb-3 font-bold text-center'>
         Contact US
         </h1>
         <p>Reach out to the seller to express your interest and ask any questions you may have about the car. You can inquire about its condition, maintenance history, ownership, and any additional details you require</p>
@@ -71,9 +71,9 @@ const Contact = () => {
                     <button type='submit' className="btn border-none  bg-[#00b894] text-white"><FaTelegramPlane className='mr-2' /><span>Send Message</span></button>
                   </div>
                 </form>
-                <div className='flex flex-col pt-4 text-white'>
+                <div className='flex flex-col pt-4 text-[#538EB6]'>
 
-                  <h1 className='text-3xl flex items-center my-3'><GoMailRead className='mr-3' /> <span className='text-xl font-medium'>meheditonmoy917@gmail.com</span></h1>
+                  <h1 className='text-3xl flex items-center my-3'><GoMailRead className='mr-3' /> <span className='text-xl font-medium'>cardealer@gmail.com</span></h1>
                   <h1 className='text-3xl flex items-center my-3'><BsFillTelephoneForwardFill className='mr-3' /> <span className='text-xl font-medium'>+880199999999</span></h1>
                   <h1 className='text-3xl flex items-center my-3'><MdLocationOn className='mr-3' /> <span className='text-xl font-medium'>Dhaka, Bangladesh</span></h1>
                 </div>

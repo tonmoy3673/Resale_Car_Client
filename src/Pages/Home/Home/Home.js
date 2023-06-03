@@ -6,6 +6,7 @@ import Section from './Section/Section';
 import CarDetails from '../CarDetails/CarDetails';
 import Secure from '../Secure/Secure';
 import Choose from './Choose/Choose';
+import Money from './Money/Money';
 
 const Home = () => {
     useTitle('Home-Page')
@@ -15,6 +16,7 @@ const Home = () => {
            <Categories></Categories>
            <Section></Section>
            <CarDetails/>
+           <Money/>
            <Choose/>
            <Secure/>
         </div>

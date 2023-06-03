@@ -16,7 +16,7 @@ const BannerItems = ({slide}) => {
     <div className="absolute flex justify-end transform -translate-y-1/2 left-24 top-2/3 w-3/4">
     <h1 className='text-4xl font-bold text-white text-start hidden lg:block'>Affordable
        Price For <br/>Resale Car <br/>
-        Buying & Selling</h1>
+        <span className='text1'>Buying & Selling</span></h1>
     </div>
     
     <div className="absolute flex justify-end transform -translate-y-1/2 left-5 right-5 bottom-0">

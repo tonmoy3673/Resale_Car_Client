@@ -35,7 +35,7 @@ const Contact = () => {
         <Lottie animationData={contact} loop={true} className='lg:w-8/12 mx-auto rounded' />
 
         <div>
-      <h1>
+      <h1 className='text-4xl lg:text-start mb-3 font-bold text-center'>
         Contact US
         </h1>
         <p>Reach out to the seller to express your interest and ask any questions you may have about the car. You can inquire about its condition, maintenance history, ownership, and any additional details you require</p>

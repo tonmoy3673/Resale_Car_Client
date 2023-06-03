@@ -49,7 +49,7 @@ const Contact = () => {
       </div>
       <div className='py-16'>
 
-        <div id='contact' className='rounded banner' style={{ backgroundImage: `url("https://i.ibb.co/3CBf0fM/contact.jpg")` }} >
+        <div id='contact' className='rounded banner' style={{ backgroundImage: `url("https://images.pexels.com/photos/13069032/pexels-photo-13069032.jpeg?auto=compress&cs=tinysrgb&w=600")`, backgroundPosition:'center',backgroundSize:'cover' }} >
 
           <h1 className='text-center text-4xl font-semibold mt-8 text-white py-16'>Please type here</h1>
 
@@ -71,7 +71,7 @@ const Contact = () => {
                     <button type='submit' className="btn border-none  bg-[#00b894] text-white"><FaTelegramPlane className='mr-2' /><span>Send Message</span></button>
                   </div>
                 </form>
-                <div className='flex flex-col pt-4 text-[#538EB6]'>
+                <div className='flex flex-col pt-4 text-white'>
 
                   <h1 className='text-3xl flex items-center my-3'><GoMailRead className='mr-3' /> <span className='text-xl font-medium'>cardealer@gmail.com</span></h1>
                   <h1 className='text-3xl flex items-center my-3'><BsFillTelephoneForwardFill className='mr-3' /> <span className='text-xl font-medium'>+880199999999</span></h1>

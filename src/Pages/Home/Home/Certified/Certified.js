@@ -6,7 +6,7 @@ const Certified = () => {
              
            <div className='grid grid-cols-1 lg:grid-cols-2 gap-8 items-center px-10 py-12'>
 
-           <div>
+           <div data-aos="zoom-in-right" data-aos-duration="2000" data-aos-delay="2200">
            <h1 className='text-4xl font-bold text-center sm:text-start mb-4 text1'>Certified Used Cars</h1>
             <p>Certified used cars are pre-owned vehicles that have undergone a thorough inspection and met specific criteria set by the manufacturer or a certified program. These programs are typically offered by dealerships or manufacturers and are designed to provide peace of mind to buyers.</p>
             <p>
@@ -14,7 +14,7 @@ const Certified = () => {
             </p>
             </div>
             <div>
-                <img src='https://i.ibb.co/93kz7gf/Certificate.jpg' alt='info'/>
+                <img src='https://i.ibb.co/93kz7gf/Certificate.jpg' alt='info' data-aos="zoom-in-left" data-aos-duration="2000" data-aos-delay="2200"/>
             </div>
            </div>
        

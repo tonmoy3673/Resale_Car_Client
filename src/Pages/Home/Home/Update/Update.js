@@ -5,7 +5,7 @@ const Update = () => {
     return (
         <div className='py-10'>
 
-            <footer aria-label="Site Footer" className="update rounded-3xl">
+            <footer aria-label="Site Footer" className="update rounded-3xl" data-aos="zoom-in" data-aos-duration="2400" data-aos-delay="1800">
                 <div className="mx-auto px-4 pb-8 pt-16 sm:px-6 lg:px-8">
                     <div className="mx-auto max-w-md">
                         <strong

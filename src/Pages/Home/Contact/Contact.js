@@ -33,13 +33,13 @@ const Contact = () => {
   }
 
   return (
-    <div className='' data-aos="fade-up">
+    <div className=''>
       
 
       <div className='grid grid-cols-1 lg:grid-cols-2 items-center'>
-        <Lottie animationData={contact} loop={true} className='lg:w-8/12 mx-auto rounded' />
+        <Lottie animationData={contact} loop={true} className='lg:w-8/12 mx-auto rounded' data-aos="zoom-in-down" data-aos-duration="2000" data-aos-delay="2300"/>
 
-        <div>
+        <div data-aos="fade-up-left" data-aos-duration="2000" data-aos-delay="2400">
       <h1 className='text-4xl text1 lg:text-start mb-3 font-bold text-center'>
         Contact US
         </h1>

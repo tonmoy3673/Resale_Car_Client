@@ -14,7 +14,7 @@ import Contact from '../Contact/Contact';
 const Home = () => {
     useTitle('Home-Page')
     return (
-        <div className='mx-5'>
+        <div className='mx-5 overflow-x-hidden'>
            <Banner></Banner>
            <Categories></Categories>
            <Section></Section>
@@ -26,6 +26,7 @@ const Home = () => {
            <Certified/>
            <Contact/>
         </div>
+        
     );
 };
 

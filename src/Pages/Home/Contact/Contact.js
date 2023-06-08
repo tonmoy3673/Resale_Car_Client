@@ -37,9 +37,9 @@ const Contact = () => {
       
 
       <div className='grid grid-cols-1 lg:grid-cols-2 items-center'>
-        <Lottie animationData={contact} loop={true} className='lg:w-8/12 mx-auto rounded' data-aos="zoom-in-down" data-aos-duration="2000" data-aos-delay="2300"/>
+        <Lottie animationData={contact} loop={true} className='lg:w-8/12 mx-auto rounded' data-aos="zoom-in-down" data-aos-duration="2000" data-aos-delay="2100"/>
 
-        <div data-aos="fade-up-left" data-aos-duration="2000" data-aos-delay="2400">
+        <div data-aos="fade-up-left" data-aos-duration="2000" data-aos-delay="2100">
       <h1 className='text-4xl text1 lg:text-start mb-3 font-bold text-center'>
         Contact US
         </h1>
@@ -54,7 +54,7 @@ const Contact = () => {
       </div>
       <div className='py-16'>
 
-        <div id='contact' className='rounded banner' style={{ backgroundImage: `url("https://i.ibb.co/rwKqLGz/carBG.jpg")`, backgroundPosition:'center',backgroundSize:'cover' }} data-aos="zoom-out-up" data-aos-duration="1600" data-aos-delay="2600">
+        <div id='contact' className='rounded banner' style={{ backgroundImage: `url("https://i.ibb.co/rwKqLGz/carBG.jpg")`, backgroundPosition:'center',backgroundSize:'cover' }} data-aos="zoom-in-up" data-aos-duration="1600" data-aos-delay="2500">
 
           <h1 className='text-center text-4xl font-semibold mt-8 text-white py-16'>Please type here</h1>
 

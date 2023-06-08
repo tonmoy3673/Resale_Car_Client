@@ -32,7 +32,7 @@ const Money = () => {
 
 
                 <div className='text-center lg:text-start' data-aos="fade-right"
-        data-aos-duration="2200" data-aos-delay="1300" data-aos-easing="ease-in-sine">
+        data-aos-duration="2200" data-aos-delay="1200" data-aos-easing="ease-in-sine">
                 
                     <h1 className='text-4xl font-bold text1 py-4'>Build your custom <br />subscription platform</h1>
                     <p className='text-md text-black'>Build your custom subscription platform

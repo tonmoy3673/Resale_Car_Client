@@ -11,7 +11,7 @@ const Update = () => {
                         <strong
                             className="block text-center text-xl font-bold text-white sm:text-3xl"
                         >
-                           Get More Updates
+                            Get More Updates
                         </strong>
                         <p className='py-3'>Join our mailing list to stay in the loop with our newest feature releases, NFT drops, and tips and tricks </p>
 

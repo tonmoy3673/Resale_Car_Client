@@ -3,6 +3,9 @@ import Category from '../Category/Category';
 import './Categories.css';
 import Lottie from "lottie-react";
 import car from '../Lottie/carr.json';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 
 const Categories = () => {
     const [categories, setCategories] = useState([])
@@ -11,8 +14,14 @@ const Categories = () => {
             .then(res => res.json())
             .then(data => setCategories(data))
     }, [])
+
+    useEffect(() => {
+        AOS.init(
+         
+        );
+      }, [])
     return (
-        <div className='container py-12'>
+        <div className='container py-12' data-aos="fade-left">
            <div className='grid items-center justify-center'>
            <Lottie animationData={car} loop={true} className='lg:w-3/12 mx-auto rounded w-1/4 -mt-5' />
             <h2 className='text-4xl -mt-6 pb-8 text-center font-bold text1'>Cars Categories</h2>

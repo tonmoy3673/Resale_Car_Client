@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { GoMailRead } from "react-icons/go";
 import { BsFillTelephoneForwardFill } from "react-icons/bs";
 import { MdLocationOn } from "react-icons/md";
@@ -9,10 +9,15 @@ import { toast } from 'react-hot-toast';
 import './Contact.css';
 import Lottie from "lottie-react";
 import contact from '../Home/Lottie/contact.json';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Contact = () => {
 
   const form = useRef();
+  useEffect(() => {
+        AOS.init();
+      }, []);
 
   const handleSendEmail = (event) => {
     event.preventDefault()
@@ -28,7 +33,7 @@ const Contact = () => {
   }
 
   return (
-    <div className=''>
+    <div className='' data-aos="fade-up">
       
 
       <div className='grid grid-cols-1 lg:grid-cols-2 items-center'>

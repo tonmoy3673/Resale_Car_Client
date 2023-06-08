@@ -54,7 +54,7 @@ const Contact = () => {
       </div>
       <div className='py-16'>
 
-        <div id='contact' className='rounded banner' style={{ backgroundImage: `url("https://i.ibb.co/rwKqLGz/carBG.jpg")`, backgroundPosition:'center',backgroundSize:'cover' }} >
+        <div id='contact' className='rounded banner' style={{ backgroundImage: `url("https://i.ibb.co/rwKqLGz/carBG.jpg")`, backgroundPosition:'center',backgroundSize:'cover' }} data-aos="zoom-out-up" data-aos-duration="1600" data-aos-delay="2600">
 
           <h1 className='text-center text-4xl font-semibold mt-8 text-white py-16'>Please type here</h1>
 

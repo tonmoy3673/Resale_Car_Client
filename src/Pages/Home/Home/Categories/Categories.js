@@ -21,9 +21,9 @@ const Categories = () => {
         );
       }, [])
     return (
-        <div className='container py-12' data-aos="fade-left">
+        <div className='container py-12'>
            <div className='grid items-center justify-center'>
-           <Lottie animationData={car} loop={true} className='lg:w-3/12 mx-auto rounded w-1/4 -mt-5' />
+           <Lottie animationData={car} loop={true} className='lg:w-3/12 mx-auto rounded w-1/4 -mt-5' data-aos="fade-down" data-aos-duration="2200" data-aos-delay="500"/>
             <h2 className='text-4xl -mt-6 pb-8 text-center font-bold text1'>Cars Categories</h2>
            </div>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>

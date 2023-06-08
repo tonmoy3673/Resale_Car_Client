@@ -37,7 +37,7 @@ const CarDetails = () => {
         <div className='py-16'>
             <div className='grid gap-6 lg:grid-cols-4 md:grid-cols-2 grid-cols-1'>
                 {
-                    details.map(detail=><CarDetail key={detail._id} detail={detail} data-aos-duration={detail.duration}>
+                    details.map(detail=><CarDetail key={detail._id} detail={detail}>
 
                     </CarDetail>)
                 }

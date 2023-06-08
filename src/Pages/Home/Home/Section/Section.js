@@ -6,8 +6,8 @@ import 'aos/dist/aos.css';
 const Section = () => {
     useEffect(() => {
         AOS.init({
-            delay:500,
-            duration:500
+            delay:800,
+            duration:1000
         });
       }, [])
     return (
